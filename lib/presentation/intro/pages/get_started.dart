@@ -32,13 +32,9 @@ class GetStartedPage extends StatelessWidget {
             ),
             child: Column(
               children: [
-                SizedBox(
-                  width: 250,
-                  height: 150,
-                  child: SvgPicture.asset(
-                    AppVector.logo,
-                    fit: BoxFit.cover,
-                  ),
+                SvgPicture.asset(height: 70,width: 100,
+                  AppVector.logo,
+
                 ),
                 Spacer(),
                 Text('Feel the Beat, Own the Moment!',

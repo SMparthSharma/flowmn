@@ -8,6 +8,7 @@ import 'package:flutter_svg/svg.dart';
 import '../../../common/widget/button/basic_app_button.dart';
 import '../../../core/configs/assets/app_image.dart';
 import '../../../core/configs/assets/app_vector.dart';
+import '../../auth/pages/signin_or_signup.dart';
 
 
 class ChooseModePage extends StatelessWidget {
@@ -35,13 +36,9 @@ class ChooseModePage extends StatelessWidget {
             ),
             child: Column(
               children: [
-                SizedBox(
-                  width: 250,
-                  height: 150,
-                  child: SvgPicture.asset(
-                    AppVector.logo,
-                    fit: BoxFit.cover,
-                  ),
+                SvgPicture.asset(
+                  AppVector.logo,
+                  height: 70,width: 100,
                 ),
                 Spacer(),
                 Text('Choose Mode',
@@ -111,7 +108,9 @@ class ChooseModePage extends StatelessWidget {
                 ),
                 SizedBox(height: 60,),
                 BasicAppButton(onPressed: (){
-
+                      Navigator.push(context,
+                      MaterialPageRoute(builder:(BuildContext context)=>SigninOrSignupPage())
+                      );
                 }, title: 'Continued')
               ],
             ),
